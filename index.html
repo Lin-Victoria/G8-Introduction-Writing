@@ -11,60 +11,132 @@
             font-family: Arial, sans-serif;
             margin: 0;
             line-height: 1.6;
+            background: #f5f5f5;
         }
+
+        /* Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #003366;
-            color: white;
-            padding: 15px;
-            text-align: center;
+            background: #fcfafa;
+            color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
             z-index: 1000;
         }
+
+        header img {
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
         .container {
-            margin-top: 100px;
+            margin-top: 80px;
             padding: 20px;
         }
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
+
+        /* Section */
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
-        img {
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            border-left: 5px solid #003366;
+            padding-left: 10px;
+        }
+
+        img.main-img {
             width: 100%;
             max-width: 600px;
             display: block;
             margin: 20px auto;
-        }
-        .facebook-box {
-            margin-top: 40px;
-            padding: 20px;
-            border: 2px solid #1877f2;
-            background-color: #f0f2f5;
             border-radius: 10px;
         }
+
+        /* Facebook Style */
+        .fb-post {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .fb-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .fb-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .fb-name {
+            font-weight: bold;
+        }
+
+        .fb-content {
+            margin: 10px 0;
+        }
+
+        .fb-actions {
+            margin-top: 10px;
+            color: gray;
+            display: flex;
+            align-items: center;
+        }
+
+        .like-icon {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>NTU Commissary Website</h1>
+    <!-- 台大 logo（請換成你的圖片檔） -->
+    <img src="ntu-logo.png" alt="NTU Logo">
+    <h1>NTU Commissary</h1>
 </header>
 
 <div class="container">
 
-    <h2>History</h2>
+    <!-- History -->
+    <div class="section">
+        <h2>History</h2>
     <p>
         Our story began in 1976 at the Xiao-Fu Building (小福樓). Originally, there was a quiet store reserved exclusively for the post office and Hua Nan Bank staff. But in 1980, a student restaurant opened on the second floor, and that’s when students finally started hanging out there. There is a campus rumor about that opening day, the owner actually set off fireworks to celebrate. The noise was so loud that professors had to pause their lectures for 10 minutes until it finished. Eventually this became one of the most unforgettable memories for older alumni.
     </p>
 
     <p>
-        However, as more students visited, they realized the staff-only store was unfair. In 1989, the first Student Union President, Luo Wen-jia, led a protest. They set up stalls outside the Xiao-Fu Building to sell food at cost price, encouraging people not to shop at the staff-only store. Finally, in 1990, we were officially founded, marking a victory for NTU students, where both students and staff could share resources equally.
+       However, as more students visited, they realized the staff-only store was unfair. In 1989, the first Student Union President, Luo Wen-jia, led a protest. They set up stalls outside the Xiao-Fu Building to sell food at cost price, encouraging people not to shop at the staff-only store. Finally, in 1990, we were officially founded, marking a victory for NTU students, where both students and staff could share resources equally.
     </p>
 
     <p>
-        More interestingly, the name “Commissary” (合作社) was given by the president at the time and carries a deep meaning in Chinese. Unlike traditional businesses, profit is not our primary goal. Instead, we operate through a cooperative model, supporting the community and giving back through reinvestment and contributions to public welfare. This also reflects our shift from simply sharing resources within NTU to extending support to communities across Taiwan.
+       More interestingly, the name “Commissary” (合作社) was given by the president at the time and carries a deep meaning in Chinese. Unlike traditional businesses, profit is not our primary goal. Instead, we operate through a cooperative model, supporting the community and giving back through reinvestment and contributions to public welfare. This also reflects our shift from simply sharing resources within NTU to extending support to communities across Taiwan.
     </p>
 
     <p>
@@ -84,50 +156,80 @@
     </p>
 
     <p>
-        Take our milk, for example. It is delivered straight from the NTU Farm, providing students and faculty a fresh, smooth, and nutritious refreshment option, perfect for a treat at the end of a tiring day. This milk is even made into ice cream to be sold! At one point, the standard price was as low as 10 NTD per pint. Another famous product, carrot bread, is actually a creative brainchild of Agricultural Chemistry students.
+        Take our milk, for example. It is delivered straight from the NTU Farm, providing students and faculty a fresh, smooth, and nutritious refreshment option, perfect for a treat at the end of a tiring day. This milk is even made into ice cream to be sold! At one point, the standard price was as low as 10 NTD per pint. Another famous product, carrot bread, is actually a creative brainchild of Agricultural Chemistry students. 
+
+    <p>
+        In addition to offering affordable products, we actively collaborate with academic departments to develop “Made in NTU” items like these.  We also carry NTU merchandise, including T-shirts, hoodies, and jackets, perfect for showing your school spirit. Some products even serve as experimental items, allowing us to gather real student feedback and continuously improve. In this way, our stores function not only as retail spaces, but also as platforms for innovation and learning.
     </p>
 
     <p>
-        In addition to offering affordable products, we actively collaborate with academic departments to develop “Made in NTU” items like these. We also carry NTU merchandise, including T-shirts, hoodies, and jackets, perfect for showing your school spirit. Some products even serve as experimental items, allowing us to gather real student feedback and continuously improve.
+        In addition, we also care deeply about the stories behind the products we offer. Many of them are locally sourced, environmentally certified, or connected to the promotion of Taiwanese culture. Each item represents our commitment to sustainability and to supporting both the campus and the wider community.
     </p>
 
     <p>
-        In addition, we also care deeply about the stories behind the products we offer. Many of them are locally sourced, environmentally certified, or connected to the promotion of Taiwanese culture.
+        Next time you’re on campus, come check us out! Whether you’re looking for a quick bite, or everyday essentials, we’ve got you covered. We offer a variety of certified products, including eggs, packaged snacks, pork, corn, and frozen foods like BBQ chicken. For those seeking healthier options, we also carry organic vegetables such as cabbage and other seasonal produce. In addition, you’ll find a wide selection of snacks, from ice cream and cookies to creative Taiwanese-style crackers.
     </p>
-
+        
     <p>
-        Next time you’re on campus, come check us out! Whether you’re looking for a quick bite or everyday essentials, we’ve got you covered.
+        Forgot a pen before an exam? No problem. Our stores are fully stocked with stationery and essential supplies, ensuring you’re always prepared.
     </p>
-
+        
     <p>
         NTU Commissary—we’ve got you covered.
     </p>
     
     <h2>Scoial Media</h2>
-    
-    <!-- Facebook 風格區塊 -->
-    <div class="facebook-box">
-        <p>
-            Have you really experienced campus life if you haven’t ridden a bike across the Royal Palm Boulevard just to grab a fresh carton of NTU milk and a sandwich before it sells out? Today, we are shining a spotlight on the true unsung hero of our daily campus grind: the NTU Staff and National Taiwan University Commissary (臺大員生消費合作社)!
-        </p>
+    <!-- Facebook 區塊 -->
+    <div class="section">
+        <div class="fb-post">
 
-        <p>
-            Whether you know it best as the bustling "Xiao Fu" (小福) located right near the Putong Lecture Building or the charmingly hidden "Xiao Xiao Fu" tucked away near the Gontong Lecture Building , the Coop is undeniably the beating heart of our student survival kit. It’s far more than just a grocery store; it’s a sanctuary where you can escape the oppressive humidity of a sweltering Taipei afternoon with a scoop of legendary, locally-produced NTU Farm ice cream. 
-        </p>
+            <div class="fb-header">
+                <img src="ntu-logo.png">
+                <div>
+                    <div class="fb-name">National Taiwan University</div>
+                    <div style="font-size:12px;color:gray;">3 hrs ago</div>
+                </div>
+            </div>
 
-        <p>
-            Think about those grueling midterm weeks when you have exactly ten minutes between back-to-back exams. It’s the Coop that provides that piping hot, budget-friendly bento box to refuel your brain. Let’s not also forget the "life-saving" stationery section, offering heavily discounted pens and correction tapes that have rescued countless students just seconds before a surprise pop quiz!  For those of us navigating long hours in the chemistry labs or drafting reports until midnight, these quick stops are often the only chance to recharge and reconnect with the campus pulse.
-        </p>
+            <div class="fb-content">
+                Have you really experienced campus life if you haven’t ridden a bike across the Royal Palm Boulevard just to grab a fresh carton of NTU milk and a sandwich before it sells out? Today, we are shining a spotlight on the true unsung hero of our daily campus grind: the NTU Staff and National Taiwan University Commissary (臺大員生消費合作社)!
+                
+                Whether you know it best as the bustling "Xiao Fu" (小福) located right near the Putong Lecture Building or the charmingly hidden "Xiao Xiao Fu" tucked away near the Gontong Lecture Building , the Coop is undeniably the beating heart of our student survival kit. It’s far more than just a grocery store; it’s a sanctuary where you can escape the oppressive humidity of a sweltering Taipei afternoon with a scoop of legendary, locally-produced NTU Farm ice cream. 
+                
+                Think about those grueling midterm weeks when you have exactly ten minutes between back-to-back exams. It’s the Coop that provides that piping hot, budget-friendly bento box to refuel your brain. Let’s not also forget the "life-saving" stationery section, offering heavily discounted pens and correction tapes that have rescued countless students just seconds before a surprise pop quiz!  For those of us navigating long hours in the chemistry labs or drafting reports until midnight, these quick stops are often the only chance to recharge and reconnect with the campus pulse.
+                
+                Beyond the amazing snacks and cheap school supplies, the Coop represents the shared, collective memory of everyone who has ever walked these campus grounds. It’s the bustling, lively hub where professors, freshmen, and visiting alumni all stand in the same line, united by bottles of chilled, farm-fresh milk directly from the NTU dairy farm.
+                
+                What is your absolute favorite "Coop find" that gets you through the semester? Feel free to drop a comment below!
+            </div>
 
-        <p>
-            Beyond the amazing snacks and cheap school supplies, the Coop represents the shared, collective memory of everyone who has ever walked these campus grounds. It’s the bustling, lively hub where professors, freshmen, and visiting alumni all stand in the same line, united by bottles of chilled, farm-fresh milk directly from the NTU dairy farm.
-        </p>
-        
-        <p>
-            What is your absolute favorite "Coop find" that gets you through the semester? Feel free to drop a comment below!
+            <div class="fb-actions">
+                <span class="like-icon">👍</span> Like
+            </div>
+
+        </div>
     </div>
 
-</div>
+</div>    
+<!-- Scroll Animation JS -->
+<script>
+    const sections = document.querySelectorAll('.section');
+
+    function showOnScroll() {
+        const trigger = window.innerHeight * 0.85;
+
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+
+            if (top < trigger) {
+                section.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', showOnScroll);
+    showOnScroll();
+</script>
 
 </body>
 </html>
